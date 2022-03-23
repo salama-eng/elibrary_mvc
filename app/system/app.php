@@ -8,12 +8,11 @@ class App{
     {
        
         $urlParts=explode('/',$_GET['url']);
-        //        print_r($urlParts);
+  //       print_r($urlParts);
        
         if(file_exists("app/controllers/".$urlParts[0].".php")){
           $this->controller=$urlParts[0];  
           unset($urlParts[0]);
-        
         }
 
        // print_r($urlParts);

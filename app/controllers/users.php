@@ -20,7 +20,6 @@ class Users extends Controller
     function show($id)
     {
 
-
         $user = $this->model('user');
         $userName = $user->select($id);
         $this->view('user_view', $userName);
@@ -44,8 +43,9 @@ class Users extends Controller
             $email=$this->valid->test_input($_POST['email']);
            
             
-           if($this->valid->validate($email,$userName,$password))
+           if($this->valid->isEmail( $email)&&$this->valid->Testlength($userName,15,4)&&$this->valid->Testlength($password,15,4))
            {
+              
                $user_data =array(
                    'name'=>$userName,
                    'password'=>md5($password),
@@ -60,12 +60,14 @@ class Users extends Controller
                     $this->view('feedback',array('type'=>$type,'message'=>$message));
 
                 }}
-               else if($this->valid->validate($email,$userName,$password)==false){
+
+               else{
            
                    $type='danger';
                    $message="can not create user please check your data ";
-               
-                   $this->view('register',array('type'=>$type,'message'=>$message,'form_values'=>$_POST));
+                   $lengthMSG=$this->valid->lengthMSG;
+                   $emailMSG=$this->valid->emailMSG;
+                   $this->view('register',array('type'=>$type,'message'=>$message,'message_length'=>$lengthMSG,'message_email'=> $emailMSG,'form_values'=>$_POST));
 
                 }
            } 
