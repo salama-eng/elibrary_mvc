@@ -1,9 +1,14 @@
 <?php
 require_once 'controller.php';
-class Users extends Controller
+require_once 'validation.php';
+class Users extends Controller 
 {
+   public $valid;
+
     public function __construct()
     {
+
+        $this->valid = new validation();
 
         echo "<h1>inside users controller construct</h1>";
     }
@@ -26,30 +31,7 @@ class Users extends Controller
         echo "<h1>add of users</h1>";
     }
 
-    function test_input($data) {
-        $data = trim($data);
-        $data = stripslashes($data);
-        $data = htmlspecialchars($data);
-        return $data;
-      }
 
- function validate($email,$name,$password):bool
- {
-    if(strlen($name)>0 && strlen($name)<20&&strlen($password)>0&&strlen($password)<20&&filter_var($email, FILTER_VALIDATE_EMAIL))
-    {
-         return true;
-         echo "true";
-    }
-   
-    else
-    {
-        echo "false";
-         return false;
-    }
-   
-
-
- }
 
     function add_user()
     {
@@ -57,12 +39,12 @@ class Users extends Controller
         print_r($_POST);
         if(isset($_POST['submit']))
         {
-            $userName=$this->test_input($_POST['name']);
-            $password=$this->test_input($_POST['password']);
-            $email=$this->test_input($_POST['email']);
+            $userName= $this->valid->test_input($_POST['name']);
+            $password=$this->valid->test_input($_POST['password']);
+            $email=$this->valid->test_input($_POST['email']);
            
             
-           if($this->validate($email,$userName,$password))
+           if($this->valid->validate($email,$userName,$password))
            {
                $user_data =array(
                    'name'=>$userName,
@@ -78,7 +60,7 @@ class Users extends Controller
                     $this->view('feedback',array('type'=>$type,'message'=>$message));
 
                 }}
-               else if($this->validate($email,$userName,$password)==false){
+               else if($this->valid->validate($email,$userName,$password)==false){
            
                    $type='danger';
                    $message="can not create user please check your data ";
