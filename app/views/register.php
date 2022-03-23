@@ -14,28 +14,27 @@
   <?php if(isset($data)) { ?>
   <div>
         <h1 class="alert alert-<?php echo $data['type'] ?>">
-     
-        <?php echo $data['message_length'] ?>
-        <?php echo $data['message_email'] ?>
+
+       
         <?php echo $data['message'] ?>
-        
+        <?php $message= $data['message'] ?>
     </h1>
   </div>
   <?php } ?>
 
     <form action="add_user" method="post">
       <div class="mb-3">
-        <label for="exampleInputname" class="form-label"> Name:</label>
+        <label for="exampleInputname" class="form-label"> Name: </label><h5 class="alert alert-danger"><?= empty($data['form_values']['name'])?"":$data['message_length'] ?></h5>
         <input name="name" value="<?= empty($data['form_values']['name'])?"":$data['form_values']['name'] ?> " type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
 
       </div>
       <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <label for="exampleInputEmail1" class="form-label">Email address</label><h5 class="alert alert-danger"><?= empty($data['form_values']['name'])?"":$data['message_email'] ?></h5>
         <input name="email" type="text" value="<?= empty($data['form_values']['email'])?"":$data['form_values']['email'] ?> " class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
         <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
       </div>
       <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <label for="exampleInputPassword1" class="form-label">Password</label><h5 class="alert alert-danger"><?= empty($data['form_values']['name'])?"":$data['message_length'] ?></h5>
         <input type="password" class="form-control" id="exampleInputPassword1" name="password">
       </div>
       <div class="mb-3">

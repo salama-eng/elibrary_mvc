@@ -34,7 +34,7 @@ class Users extends Controller
 
     function add_user()
     {
-
+     
         print_r($_POST);
         if(isset($_POST['submit']))
         {
@@ -42,6 +42,20 @@ class Users extends Controller
             $password=$this->valid->test_input($_POST['password']);
             $email=$this->valid->test_input($_POST['email']);
            
+            if($this->valid->isEmail( $email))
+            $emiltest=true;
+            else
+            {
+                $emailMSG=$this->valid->emailMSG;
+                $passtest=false;
+            }
+            if($this->valid->Testlength($password,15,4))
+            $emiltest=true;
+            else
+            {
+                $passMSG=$this->valid->lengthMSG;
+                $passtest=false;
+            }
             
            if($this->valid->isEmail( $email)&&$this->valid->Testlength($userName,15,4)&&$this->valid->Testlength($password,15,4))
            {

@@ -38,7 +38,7 @@ class validation{
   return true;
   else 
   {
-   $this->lengthMSG="INVAILD EMAIL";
+   $this->emailMSG="INVAILD EMAIL";
    return false;
   }
    
