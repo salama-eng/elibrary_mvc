@@ -1,6 +1,3 @@
-       
-
-<!-- Footer -->
 <footer class="content-footer footer bg-footer-theme">
   <div class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column">
     <div class="mb-2 mb-md-0">
@@ -45,7 +42,7 @@
   <!-- / Layout wrapper -->
 
   
-  
+
 
   
 
@@ -64,16 +61,36 @@
   <!-- endbuild -->
 
   <!-- Vendors JS -->
-  <script src="app/assets/vendor/libs/shepherd/shepherd.js"></script>
+  <script src="app/assets/vendor/libs/datatables/jquery.dataTables.js"></script>
+<script src="app/assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js"></script>
+<script src="app/assets/vendor/libs/datatables-responsive/datatables.responsive.js"></script>
+<script src="app/assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.js"></script>
+<script src="app/assets/vendor/libs/datatables-checkboxes-jquery/datatables.checkboxes.js"></script>
+<script src="app/assets/vendor/libs/datatables-buttons/datatables-buttons.js"></script>
+<script src="app/assets/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.js"></script>
+<script src="app/assets/vendor/libs/jszip/jszip.js"></script>
+<script src="app/assets/vendor/libs/pdfmake/pdfmake.js"></script>
+<script src="app/assets/vendor/libs/datatables-buttons/buttons.html5.js"></script>
+<script src="app/assets/vendor/libs/datatables-buttons/buttons.print.js"></script>
+<!-- Flat Picker -->
+<script src="app/assets/vendor/libs/moment/moment.js"></script>
+<script src="app/assets/vendor/libs/flatpickr/flatpickr.js"></script>
+<!-- Row Group JS -->
+<script src="app/assets/vendor/libs/datatables-rowgroup/datatables.rowgroup.js"></script>
+<script src="app/assets/vendor/libs/datatables-rowgroup-bs5/rowgroup.bootstrap5.js"></script>
+<!-- Form Validation -->
+<script src="app/assets/vendor/libs/formvalidation/dist/js/FormValidation.min.js"></script>
+<script src="app/assets/vendor/libs/formvalidation/dist/js/plugins/Bootstrap5.min.js"></script>
+<script src="app/assets/vendor/libs/formvalidation/dist/js/plugins/AutoFocus.min.js"></script>
 
   <!-- Main JS -->
   <script src="app/assets/js/main.js"></script>
 
   <!-- Page JS -->
-  <script src="app/assets/js/extended-ui-tour.js"></script>
+  <script src="app/assets/js/tables-datatables-basic.js"></script>
   
 </body>
 
 
-<!-- extended-ui-tour.html , Sat, 26 Mar 2022 16:52:51 GMT -->
+<!-- tables-datatables-basic.html , Sat, 26 Mar 2022 16:53:18 GMT -->
 </html>
