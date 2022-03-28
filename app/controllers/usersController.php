@@ -33,8 +33,17 @@ class UsersController{
         require_once 'app/views/stepper.php';
 
     }
-  
+    public static  function header(){
+      
+        require_once 'app/views/Admin/header.php';
 
+    }
+
+    public static  function booksList(){
+      
+        require_once 'app/views/Admin/booksList.php';
+
+    }
     public function model($model_name){
         require_once 'app/models/'.$model_name.'.php';
 
