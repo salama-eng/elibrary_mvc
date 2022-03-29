@@ -8,12 +8,12 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <title>Document</title>
 </head>
-<?php print_r($data);?>
+<?php print_r($params);?>
 <body>
   <div class="container col-6">
     <div>
-        <h1 class="alert alert-<?php echo $data['type'] ?>">
-        <?php echo $data['message'] ?>
+        <h1 class="alert alert-<?php echo $params['type'] ?>">
+        <?php echo $params['message'] ?>
     </h1>
     </div>
   </div>

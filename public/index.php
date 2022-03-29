@@ -23,6 +23,7 @@ $dotenv->load();
 
 // );
 
+
 $config=array(
   'servername'=>'localhost',
   'dbname'=>'elibrary',
@@ -41,7 +42,12 @@ Router::get('/basket',[UsersController::class,'basket']);
 Router::get('/stepper',[UsersController::class,'stepper']);
 Router::get('/details',[UsersController::class,'details']);   
 Router::get('/header',[UsersController::class,'header']); 
-Router::get('/booksList',[UsersController::class,'booksList']);  
+
+Router::get('/booksList',[bookController::class,'booksList']); 
+
+Router::get('/addbook',[bookController::class,'addbook']);
+Router::post('/storbook',[bookController::class,'storbook']);
+
 Router::get('/AdminCategory',[UsersController::class,'Admincategory']);   
 Router::get('/users',[UsersController::class,'users']);   
 Router::get('/authors',[UsersController::class,'authors']);  
@@ -51,7 +57,7 @@ Router::get('/order',[UsersController::class,'order']);
 Router::get('/cites',[UsersController::class,'cites']);      
 Router::get('/address',[UsersController::class,'address']);  
 Router::get('/createAuthor',[bookController::class,'createAuthor']);   
-Router::post('/addbook',[bookController::class,'addbook']);      
+      
 $system->start();
 
 

@@ -170,12 +170,10 @@ public function deleteById($table,$id){
 }
 
 /*********  testing the code******** */
-$database="blog";
+$database="elibrary";
 $dsn="mysql:host=localhost;dbname=$database;charset=utf8mb4";
 $username="root";
 $password="";
-$column=array("name,age");
-$column2=array("product.product_name,category.category_name");
 $db_obj=new Db($dsn,$username,$password);
 /**inserted data */
 /*

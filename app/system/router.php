@@ -32,13 +32,15 @@ class Router{
 
     }
 
+
     public  function executeRoute(){
      
        
         $route=$this->request->getRoute();
         $method=$this->request->getRequestMethod();
-            $callback=self::$routes[$method][$route];
+        $callback=self::$routes[$method][$route];
 
+        
         
         
             if(isset($callback))
@@ -53,6 +55,11 @@ class Router{
             else {
                 echo "page not found";
             }
+
+
+
+        
+    
 
 
 

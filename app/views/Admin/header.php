@@ -191,44 +191,120 @@
 
 
 
-    <li class="menu-item">
-      <a href="users" class="menu-link">
-        <i class="menu-icon tf-icons bx bx-calendar"></i>
-        <div data-i18n="users">Users</div>
-      </a>
-    </li>
+
+
 
     <li class="menu-item">
-      <a href="AdminCategory" class="menu-link">
-        <i class="menu-icon tf-icons bx bx-calendar"></i>
-        <div data-i18n="Category">Category</div>
+      <a href="javascript:void(0);" class="menu-link menu-toggle">
+        <i class='menu-icon tf-icons bx bx-food-menu'></i>
+        <div data-i18n="Users">users</div>
       </a>
+      <ul class="menu-sub">
+        <li class="menu-item">
+          <a href="listUsers" class="menu-link">
+            <div data-i18n="List">List users</div>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="addUser" class="menu-link">
+            <div data-i18n="Preview">Add user</div>
+          </a>
+        </li>
+        
+      </ul>
     </li>
+
+
+
+   
+
+    <li class="menu-item">
+      <a href="javascript:void(0);" class="menu-link menu-toggle">
+        <i class='menu-icon tf-icons bx bx-food-menu'></i>
+        <div data-i18n="category">category</div>
+      </a>
+      <ul class="menu-sub">
+        <li class="menu-item">
+          <a href="category" class="menu-link">
+            <div data-i18n="list category">list category</div>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="addCategory" class="menu-link">
+            <div data-i18n="Add category">Add category</div>
+          </a>
+        </li>
+        
+      </ul>
+    </li>
+
 
 
  
     <li class="menu-item">
-      <a href="booksList" class="menu-link">
-        <i class="menu-icon tf-icons bx bx-calendar"></i>
-        <div data-i18n="Books">Books</div>
+      <a href="javascript:void(0);" class="menu-link menu-toggle">
+        <i class='menu-icon tf-icons bx bx-food-menu'></i>
+        <div data-i18n="Books">books</div>
       </a>
+      <ul class="menu-sub">
+        <li class="menu-item">
+          <a href="booksList" class="menu-link">
+            <div data-i18n="list books">List books</div>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="addbook" class="menu-link">
+            <div data-i18n="Add book">Add book</div>
+          </a>
+        </li>
+        
+      </ul>
     </li>
+
 
      
     <li class="menu-item">
-      <a href="authors" class="menu-link">
-        <i class="menu-icon tf-icons bx bx-calendar"></i>
+      <a href="javascript:void(0);" class="menu-link menu-toggle">
+        <i class='menu-icon tf-icons bx bx-food-menu'></i>
         <div data-i18n="Authors">Authors</div>
       </a>
+      <ul class="menu-sub">
+        <li class="menu-item">
+          <a href="authors" class="menu-link">
+            <div data-i18n="List Authors">List authors</div>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="addauthor" class="menu-link">
+            <div data-i18n="Add author">Add Author</div>
+          </a>
+        </li>
+        
+      </ul>
     </li>
+
 
      
     <li class="menu-item">
-      <a href="publishers" class="menu-link">
-        <i class="menu-icon tf-icons bx bx-calendar"></i>
-        <div data-i18n="publishers">publishers</div>
+      <a href="javascript:void(0);" class="menu-link menu-toggle">
+        <i class='menu-icon tf-icons bx bx-food-menu'></i>
+        <div data-i18n="publishers">publisher</div>
       </a>
+      <ul class="menu-sub">
+        <li class="menu-item">
+          <a href="publishers" class="menu-link">
+            <div data-i18n="List publishers">List users</div>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="addUser" class="menu-link">
+            <div data-i18n="Add publisher">Add publisher</div>
+          </a>
+        </li>
+        
+      </ul>
     </li>
+
 
      
     <li class="menu-item">
@@ -582,7 +658,7 @@
                     <div class="d-flex">
                       <div class="flex-shrink-0 me-3">
                         <div class="avatar">
-                          <img src="assets/img/avatars/9.png" alt class="w-px-40 h-auto rounded-circle">
+                          <img src="assets/imges/avatars/9.png" alt class="w-px-40 h-auto rounded-circle">
                         </div>
                       </div>
                       <div class="flex-grow-1">
@@ -618,7 +694,7 @@
                     <div class="d-flex">
                       <div class="flex-shrink-0 me-3">
                         <div class="avatar">
-                          <img src="assets/img/avatars/5.png" alt class="w-px-40 h-auto rounded-circle">
+                          <img src="assets/imges/avatars/5.png" alt class="w-px-40 h-auto rounded-circle">
                         </div>
                       </div>
                       <div class="flex-grow-1">
@@ -636,7 +712,7 @@
                     <div class="d-flex">
                       <div class="flex-shrink-0 me-3">
                         <div class="avatar">
-                          <img src="assets/img/avatars/6.png" alt class="w-px-40 h-auto rounded-circle">
+                          <img src="assets/imges/avatars/6.png" alt class="w-px-40 h-auto rounded-circle">
                         </div>
                       </div>
                       <div class="flex-grow-1">
@@ -682,7 +758,7 @@
           <li class="nav-item navbar-dropdown dropdown-user dropdown">
             <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
               <div class="avatar avatar-online">
-                <img src="assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle">
+                <img src="assets/imges/avatars/1.png" alt class="w-px-40 h-auto rounded-circle">
               </div>
             </a>
             <ul class="dropdown-menu dropdown-menu-end">
@@ -691,7 +767,7 @@
                   <div class="d-flex">
                     <div class="flex-shrink-0 me-3">
                       <div class="avatar avatar-online">
-                        <img src="assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle">
+                        <img src="assets/imges/avatars/1.png" alt class="w-px-40 h-auto rounded-circle">
                       </div>
                     </div>
                     <div class="flex-grow-1">

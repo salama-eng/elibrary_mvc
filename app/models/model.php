@@ -42,7 +42,13 @@ class Model{
 
 
 
-  
+    public function getAll(){
+        $sql_query="select * from ".self::$tblName."";
+        $stmt=AppSystem::$appSystem->database->pdo->prepare($sql_query);
+        $stmt->execute();
+        return $stmt->fetchAll();
+
+    }
     
     
    
