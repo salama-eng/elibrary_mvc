@@ -1,5 +1,6 @@
-<?php require_once 'app/views/Admin/header.php'  ?>
+<?php
 
+require_once __DIR__."/header.php"; ?>
 
 
 
@@ -12,11 +13,8 @@
             
             
 <h4 class="fw-bold py-3 mb-4">
-  <span class="text-muted fw-light">category list /</span> Basic
+  <span class="text-muted fw-light"> DataTables /</span> Basic
 </h4>
-
-
-
 
 <!-- DataTable with Buttons -->
 <div class="card">
@@ -24,7 +22,7 @@
     <table class="datatables-basic table border-top">
       <thead>
         <tr>
-        <th></th>
+          <th></th>
           <th></th>
           <th></th>
           <th>id</th>
@@ -50,7 +48,7 @@
 <!-- Modal to add new record -->
 <div class="offcanvas offcanvas-end" id="add-new-record">
   <div class="offcanvas-header border-bottom">
-    <h5 class="offcanvas-title" id="exampleModalLabel">Add new category</h5>
+    <h5 class="offcanvas-title" id="exampleModalLabel">New Record</h5>
     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body flex-grow-1">
@@ -103,8 +101,6 @@
 </div>
 <!--/ DataTable with Buttons -->
 
-
-
 <hr class="my-5">
 
 <!-- Complex Headers -->
@@ -132,4 +128,11 @@
           
 
 <!-- Footer -->
-<?php require_once 'app/views/Admin/footer.php'  ?>
+<?php
+
+require_once __DIR__."/footer.php"; ?>
+
+
+
+
+

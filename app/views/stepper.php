@@ -6,13 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>elibrary</title>
-  <link rel="stylesheet" href="app/assets/css/style.css" />
-  <link rel="stylesheet" href="app/assets/css/stepper.css" />
-  <link rel="stylesheet" href="app/assets/css/login.css" />
-  <link href="app/assets/js/main.js" />
- <?php
-require_once 'app/views/includes/header.php'
- ?>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/stepper.css" />
+  <link rel="stylesheet" href="assets/css/login.css" />
+  <link href="assets/js/main.js" />
+  <?php
+
+require_once __DIR__."/includes/header.php"; ?>
 
 </head>
 
@@ -177,4 +177,5 @@ forms.forEach((item,i)=>{
     </script>
 
 <?php
-require_once 'app/views/includes/footer.php'  ?>
+
+require_once __DIR__."/includes/footer.php"; ?>

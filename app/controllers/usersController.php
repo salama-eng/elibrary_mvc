@@ -1,160 +1,150 @@
 <?php
 namespace coding\app\controllers;
-class UsersController{
-//  public function view($view_name,$data=null){
 
-//         require_once 'app/views/'.$view_name.'.php';
+use coding\app\models\User;
 
-//     }
+class UsersController extends Controller{
+ 
+
+
+    public function show(){
+      
+        $this->view('index');
+
+    }
     
-
-
-    public static  function show(){
-      
-        require_once 'app/views/index.php';
-
-    }
-
-    public static  function category(){
-      
-        require_once 'app/views/category.php';
-
-    }
-    public static  function basket(){
-      
-        require_once 'app/views/basket.php';
-
-    }
-    public static  function details(){
-      
-        require_once 'app/views/details.php';
-
-    }
-    public static  function stepper(){
-      
-        require_once 'app/views/stepper.php';
-
-    }
-    public static  function header(){
-      
-        require_once 'app/views/Admin/header.php';
-
-    }
-
-    public static  function booksList(){
-      
-        require_once 'app/views/Admin/booksList.php';
-
-    }
-    public static  function admincategory(){
-      
-        require_once 'app/views/Admin/admincategory.php';
-
-    }
-    public static  function order(){
-      
-        require_once 'app/views/Admin/order.php';
-
-    }
-  
-    public static  function offer(){
-      
-        require_once 'app/views/Admin/offer.php';
-
-    }
-  
    
-    public static  function users(){
+
+    public function category(){
       
-        require_once 'app/views/Admin/users.php';
+        $this->view('category');
 
     }
+    public  function basket(){
+      
+        $this->view('basket');
+    }
+    public function details(){
+      
+        $this->view('details');
+
+    }
+    public function stepper(){
+      
+        $this->view('stepper');
+
+    }
+
+   
+/************************** */
+
+
+
+
+public function booksList(){
+      
+    $this->view('admin/bookslist');
+
+}
+public function admincategory(){
   
-    public static  function payments(){
-      
-        require_once 'app/views/Admin/payments.php';
+    $this->view('admin/admincategory');
 
-    }
+}
+public function order(){
   
-    public static  function Addres(){
-      
-        require_once 'app/views/Admin/Addres.php';
+    $this->view('admin/order');
 
-    }
+}
+
+public function offer(){
   
-    public static  function publishers(){
-      
-        require_once 'app/views/Admin/publishers.php';
+    $this->view('admin/offer');
 
-    }
-     
-    public static  function cities(){
-      
-        require_once 'app/views/Admin/cities.php';
-
-    }
-    public static  function Author(){
-      
-        require_once 'app/views/Admin/author.php';
-
-    }
+}
 
 
-<<<<<<< Updated upstream
-=======
-    public static  function booksList(){
-      
-        require_once 'app/views/Admin/booksList.php';
-
-    }
-    public static  function AdminCategory(){
-      
-        require_once 'app/views/Admin/adminCategory.php';
-
-    }
-    public static  function order(){
-      
-        require_once 'app/views/Admin/order.php';
-
-    }
-    public static  function offers(){
-      
-        require_once 'app/views/Admin/offers.php';
-
-    }
-
-    public static  function publishers(){
-      
-        require_once 'app/views/Admin/publishers.php';
-
-    }
-
-    public static  function cities(){
-      
-        require_once 'app/views/Admin/cities.php';
-
-    }
-    public static  function payment(){
-      
-        require_once 'app/views/Admin/payment.php';
-
-    }
+public function users(){
+  
+    $this->view('admin/users');
 
 
-    public static  function Address(){
-      
-        require_once 'app/views/Admin/Address.php';
+}
 
-    }
+public function payments(){
+  
+    $this->view('admin/payments');
 
-    public static  function users(){
-      
-        require_once 'app/views/Admin/users.php';
+}
 
-    }
+public function Addres(){
+  
+    $this->view('admin/Addres');
+}
+
+public function publishers(){
+  
+    $this->view('admin/publishers');
+
+}
+ 
+public function cities(){
+  
+    $this->view('admin/cities');
 
 
->>>>>>> Stashed changes
+}
+public function Author(){
+  
+    $this->view('admin/Author');
+
+}
+
+
+
+public static  function offers(){
+  
+  self::view('admin/offers');
+
+}
+
+public static  function payment(){
+  
+    self::view('admin/payment');
+
+}
+
+
+public static  function Address(){
+  
+    self::view('admin/Address');
+
+}
+
+/*********************** */
+
+
+public function AddBook(){
+
+    //print_r($_POST);
+    $user=new User();
+    $user->name=$_POST['name'];
+    $user->email=$_POST['email'];
+    $user->password=md5($_POST['password']);
+    $user->is_active=isset($_POST['is_active'])?1:0;
+    $user->role_id=1;
+    $user->save();
+    if($user->save())
+    
+    $this->view('feedback',['success'=>'data inserted successful']);
+    else 
+    $this->view('feedback',['danger'=>'can not add data']);
+
+}
+
+
+   
+
     public function model($model_name){
         require_once 'app/models/'.$model_name.'.php';
 

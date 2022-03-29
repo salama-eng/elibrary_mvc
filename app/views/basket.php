@@ -1,5 +1,6 @@
 <?php
-require_once 'app/views/includes/header.php'  ?>
+
+require_once __DIR__."/includes/header.php"; ?>
   <!--    login popupp     --->
   <div id="login" class="login">
     <button id="loginclose">X</button>
@@ -26,7 +27,7 @@ require_once 'app/views/includes/header.php'  ?>
   <div id="cart-container" class="cart-container">
     <div class="cart-head">
       <h2>السلة</h2>
-      <img src="app/assets/icons/basket.png" alt="" height="50px" width="50px">
+      <img src="assets/icons/basket.png" alt="" height="50px" width="50px">
     </div>
     <div class="cart-left">
       
@@ -67,7 +68,7 @@ require_once 'app/views/includes/header.php'  ?>
 
       <div class="cart-book">
 
-        <img src="app/assets/books/book13.jpeg" alt="" width="90px">
+        <img src="assets/books/book13.jpeg" alt="" width="90px">
         <h4>البداية والنهاية الجزء الاول</h4>
         <p>منتج قابل للخصم</p>
         <div class="note">
@@ -78,7 +79,7 @@ require_once 'app/views/includes/header.php'  ?>
 
       <div class="cart-book">
 
-        <img src="app/assets/books/book4.jpeg" alt="" width="90px">
+        <img src="assets/books/book4.jpeg" alt="" width="90px">
         <h4>البداية والنهاية الجزء الاول</h4>
         <p>منتج قابل للخصم</p>
         <div class="note">
@@ -88,7 +89,7 @@ require_once 'app/views/includes/header.php'  ?>
       </div>
       <div class="cart-book">
 
-        <img src="app/assets/books/book7.jpeg" alt="" width="90px">
+        <img src="assets/books/book7.jpeg" alt="" width="90px">
         <h4>البداية والنهاية الجزء الاول</h4>
         <p>منتج قابل للخصم</p>
         <div class="note">
@@ -103,6 +104,6 @@ require_once 'app/views/includes/header.php'  ?>
 
 
 
-
   <?php
-require_once 'app/views/includes/footer.php'  ?>
+
+require_once __DIR__."/includes/footer.php"; ?>

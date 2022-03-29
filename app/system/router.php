@@ -2,6 +2,14 @@
 namespace coding\app\system;
 class Router{
 
+    public $request;
+    public $response;
+    public function __construct($request)
+    {
+        $this->request=$request;
+        
+    }
+
 
 
     protected  static $routes=array(); 
@@ -24,16 +32,38 @@ class Router{
 
     }
 
-    public static function executeRoute($method,$url){
-            $callback=self::$routes[$method][$url];
+    public  function executeRoute(){
+     
+       
+        $route=$this->request->getRoute();
+        $method=$this->request->getRequestMethod();
+            $callback=self::$routes[$method][$route];
+
+        
         
             if(isset($callback))
-            call_user_func($callback);
+            {
+                if(is_array($callback))
+                {
+                    $callback[0]=new $callback[0];
+                }
+
+                call_user_func($callback);
+            }
             else {
-                require_once 'app/views/index.php';
+                echo "page not found";
             }
 
+
+
     }
+
+    public function view($v,$params){
+
+        require_once __DIR__."/../views/$v.php";
+
+    }
+ 
 
 }
 ?>

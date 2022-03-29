@@ -1,5 +1,6 @@
 <?php
-require_once 'app/views/includes/header.php'  ?>
+
+require_once __DIR__."/includes/header.php"; ?>
   <!--    login popupp     --->
   <div id="login" class="login">
     <button id="loginclose">X</button>
@@ -36,18 +37,18 @@ require_once 'app/views/includes/header.php'  ?>
 
 
     <div class="details1">
-      <img onclick="callImage(this);" src="app/assets/books/book2.webp" alt="" width="250px">
+      <img onclick="callImage(this);" src="assets/books/book2.webp" alt="" width="250px">
       <div style="border: olive solid 1px; width: 4rem;
  display: flex;justify-content: space-around;border-radius: 0.5rem;
-"> <img src="app/assets/books/book2.webp" alt="" width="40px"></div>
+"> <img src="assets/books/book2.webp" alt="" width="40px"></div>
     </div>
 
   <!--  books popUpp-->
   <div id="popUP">
     <div class="header">
       <button onclick="hideModule('popUP');">X</button>
-      <button id="app/assets/book-prev">></button>
-      <button id="app/assets/book-next">
+      <button id="assets/book-prev">></button>
+      <button id="assets/book-next">
         <</button>
 
     </div>
@@ -91,7 +92,7 @@ require_once 'app/views/includes/header.php'  ?>
 
       <div class="details3-2"> 
         <select name="1" id="">1</select>
-       <a href="app/assets/pages/basket.html"><button class="addtocart"> تحديث الى السلة </button></a> 
+       <a href="assets/pages/basket.html"><button class="addtocart"> تحديث الى السلة </button></a> 
        
       </div>
 
@@ -102,16 +103,16 @@ require_once 'app/views/includes/header.php'  ?>
         <ul>
           
          
-          <li>اصلي ومضمون<img src="app/assets/icons/star.png" alt="" width="30px"></li>
-          <li>شحن سريع ومجاني<img src="app/assets/icons/track.png" alt="" width="30px"> </li> 
-          <li>تسوق امن<img src="app/assets/icons/privacy.png" alt="" width="30px"> </li>
+          <li>اصلي ومضمون<img src="assets/icons/star.png" alt="" width="30px"></li>
+          <li>شحن سريع ومجاني<img src="assets/icons/track.png" alt="" width="30px"> </li> 
+          <li>تسوق امن<img src="assets/icons/privacy.png" alt="" width="30px"> </li>
         </ul>
       </div>
 
       <div class="details3-4">
-        <div>مشاركة<img src="app/assets/icons/twitter.png" width="20px" alt=""></div>
-        <div>المفضلة<img src="app/assets/icons/insta.png" width="20px" alt=""></div>
-        <div>مقارنة<img src="app/assets/icons/snap.png" width="20px" alt=""></div>
+        <div>مشاركة<img src="assets/icons/twitter.png" width="20px" alt=""></div>
+        <div>المفضلة<img src="assets/icons/insta.png" width="20px" alt=""></div>
+        <div>مقارنة<img src="assets/icons/snap.png" width="20px" alt=""></div>
 
       </div>
 
@@ -212,14 +213,14 @@ require_once 'app/views/includes/header.php'  ?>
    <h1>منتجات مشابهه</h1>
 
 
-  <div><img src="app/assets/books/book10.jpeg" width="150px" alt="">
+  <div><img src="assets/books/book10.jpeg" width="150px" alt="">
   <h2> لأني عبدك </h2>
   <p class="price">15رس</p>
   <p>شامل الضريبة</p>
   </div>
 
 
-  <div><img src="app/assets/books/book11.jpeg" width="150px" alt="">
+  <div><img src="assets/books/book11.jpeg" width="150px" alt="">
     <h2>وضيفة الدين في الحياة</h2>
     <p class="price">15رس</p>
     <p>شامل الضريبة</p>
@@ -227,7 +228,7 @@ require_once 'app/views/includes/header.php'  ?>
 
 
     
-  <div><img src="app/assets/books/book12.jpeg" width="150px" alt="">
+  <div><img src="assets/books/book12.jpeg" width="150px" alt="">
     <h2> اصول الدين </h2>
     <p class="price">15رس</p>
     <p>شامل الضريبة</p>
@@ -235,7 +236,7 @@ require_once 'app/views/includes/header.php'  ?>
 
 
     
-  <div><img src="app/assets/books/book13.jpeg" width="150px" alt="">
+  <div><img src="assets/books/book13.jpeg" width="150px" alt="">
     <h2>القدس الشريف  </h2>
     <p class="price">15رس</p>
     <p>شامل الضريبة</p>
@@ -243,7 +244,7 @@ require_once 'app/views/includes/header.php'  ?>
 
 
     
-  <div><img src="app/assets/books/book2.webp" width="150px" alt="">
+  <div><img src="assets/books/book2.webp" width="150px" alt="">
     <h2> لانك الله </h2>
     <p class="price">15رس</p>
     <p>شامل الضريبة</p>
@@ -251,7 +252,7 @@ require_once 'app/views/includes/header.php'  ?>
 
 
     
-  <div><img src="app/assets/books/book11.jpeg" width="150px" alt="">
+  <div><img src="assets/books/book11.jpeg" width="150px" alt="">
     <h2>وضيفة الدين في الحياة  </h2>
     <p class="price">15رس</p>
     <p>شامل الضريبة</p>
@@ -263,6 +264,6 @@ require_once 'app/views/includes/header.php'  ?>
 
 
 
+  <?php
 
-    <?php
-require_once 'app/views/includes/footer.php'  ?>
+require_once __DIR__."/includes/footer.php"; ?>

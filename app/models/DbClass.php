@@ -1,5 +1,5 @@
-
 <?php
+namespace coding\app\models;
 
 class Db{
   private $pdo;
@@ -7,7 +7,7 @@ class Db{
   
   function __construct($dsn,$username,$password)
   {
-      $this->pdo=new PDO($dsn,$username,$password);
+      $this->pdo=new \PDO($dsn,$username,$password);
     
   }
 
@@ -17,8 +17,9 @@ function runQuery()
   $stmt=$this->pdo->prepare($this->final_query);
   $stmt->execute();
   // echo $this->final_query;
-  return $stmt->fetchAll(PDO::FETCH_OBJ);
+  return $stmt->fetchAll(\PDO::FETCH_OBJ);
 }
+
 
 
   /******** insert FUNCTION ******* */

@@ -1,5 +1,6 @@
 <?php
-require_once 'app/views/includes/header.php'  ?>
+
+require_once __DIR__."/includes/header.php"; ?>
 
   <!--    login popupp     --->
   <div id="login" class="login">
@@ -32,10 +33,10 @@ require_once 'app/views/includes/header.php'  ?>
   <!-- Slideshow container -->
 
   <div class="slider">
-    <img class="mySlides" src="app/assets/adds/home4.jpg">
-    <img class="mySlides" src="app/assets/adds/home3.jpg">
-    <img class="mySlides" src="app/assets/adds/home2.jpg">
-    <img class="mySlides" src="app/assets/adds/home1.jpg">
+    <img class="mySlides" src="assets/adds/home4.jpg">
+    <img class="mySlides" src="assets/adds/home3.jpg">
+    <img class="mySlides" src="assets/adds/home2.jpg">
+    <img class="mySlides" src="assets/adds/home1.jpg">
   </div>
   
 
@@ -50,12 +51,12 @@ require_once 'app/views/includes/header.php'  ?>
 <a href="category">
 <div class="dep-icon">
   <div class="dep-icon1"><img src="/icon1.png" alt=""></div>
-  <div class="dep-icon1"><img src="app/assets/icons/icon2.png" alt=""></div>
-  <div class="dep-icon1"><img src="app/assets/icons/icon3.png" alt=""></div>
-  <div class="dep-icon1"><img src="app/assets/icons/icon4.png" alt=""></div>
-  <div class="dep-icon1"><img src="app/assets/icons/icon5.png" alt=""></div>
-  <div class="dep-icon1"><img src="app/assets/icons/icon6.png" alt=""></div>
-  <div class="dep-icon1"><img src="app/assets/icons/icon7.png" alt=""></div>
+  <div class="dep-icon1"><img src="assets/icons/icon2.png" alt=""></div>
+  <div class="dep-icon1"><img src="assets/icons/icon3.png" alt=""></div>
+  <div class="dep-icon1"><img src="assets/icons/icon4.png" alt=""></div>
+  <div class="dep-icon1"><img src="assets/icons/icon5.png" alt=""></div>
+  <div class="dep-icon1"><img src="assets/icons/icon6.png" alt=""></div>
+  <div class="dep-icon1"><img src="assets/icons/icon7.png" alt=""></div>
   
 </div></a>
 
@@ -68,11 +69,11 @@ require_once 'app/views/includes/header.php'  ?>
 
 
  <div class="adds">
-   <div class="add"><img src="app/assets/adds/add1.png" alt=""></div>
-   <div class="add"><img src="app/assets/adds/add2.png" alt=""></div>
-   <div class="add"><img src="app/assets/adds/add3.png" alt=""></div>
-   <div class="add"><img src="app/assets/adds/add4.png" alt=""></div>
-   <div class="add"><img src="app/assets/adds/add5.png" alt="" width="100%"></div>
+   <div class="add"><img src="assets/adds/add1.png" alt=""></div>
+   <div class="add"><img src="assets/adds/add2.png" alt=""></div>
+   <div class="add"><img src="assets/adds/add3.png" alt=""></div>
+   <div class="add"><img src="assets/adds/add4.png" alt=""></div>
+   <div class="add"><img src="assets/adds/add5.png" alt="" width="100%"></div>
   
 
    
@@ -89,22 +90,22 @@ require_once 'app/views/includes/header.php'  ?>
 
     <div class="book">
       <div id="days"></div>
-     <a href="details"><img src="app/assets/books/book10.jpeg" alt="" height="250rem" width="180rem"></a> 
+     <a href="details"><img src="assets/books/book10.jpeg" alt="" height="250rem" width="180rem"></a> 
       <div class="booktype">
         <h1 class="search_key">كتاب الكتروني</h1>
-        <img src="app/assets/icons/logo.png" alt="" height="50rem">
+        <img src="assets/icons/logo.png" alt="" height="50rem">
       </div>
       <p>كبرياء وهو كتاب الكتروني</p>
       <h4>17.9<span style="font-size:0.8rem;">ر.س</span></h4>
-      <img src="app/assets/icons/star.png" alt="" height="30rem">
+      <img src="assets/icons/star.png" alt="" height="30rem">
 
         <!--  basket =====================-->
 
-      <img onclick="basket_count1()" src="app/assets/icons/basket2.png"
+      <img onclick="basket_count1()" src="assets/icons/basket2.png"
        alt="" height="35rem" style="background-color: rgb(247, 12, 12);
        border-radius: 50%;padding:.2rem;"
        >
-      <img src="app/assets/icons/close.png" alt="" height="30rem">
+      <img src="assets/icons/close.png" alt="" height="30rem">
       
     </div>
 
@@ -174,6 +175,6 @@ require_once 'app/views/includes/header.php'  ?>
  
   <!--  footer     -->
   
-
   <?php
-require_once 'app/views/includes/footer.php'  ?>
+
+require_once __DIR__."/includes/footer.php"; ?>

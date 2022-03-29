@@ -1,5 +1,6 @@
 <?php
-require_once 'app/views/includes/header.php'  ?>
+
+require_once __DIR__."/includes/header.php"; ?>
   <!--    login popupp     --->
   <div id="login" class="login">
     <h1>تسجيل الدخول</h1>
@@ -39,86 +40,36 @@ require_once 'app/views/includes/header.php'  ?>
 
           
     <div class="book">
-        <img onclick="callImage(this);" src="app/assets/books/book2.webp" alt="" height="250rem" width="180rem">
+        <img onclick="callImage(this);" src="assets/books/book2.webp" alt="" height="250rem" width="180rem">
         <div class="booktype">
           <h1 class="search_key">كتاب الكتروني</h1>
-          <img src="app/assets/icons/logo.png" alt="" height="50rem">
+          <img src="assets/icons/logo.png" alt="" height="50rem">
         </div>
         <p>كبرياء وهو كتاب الكتروني</p>
         <h4>17.9<span style="font-size:0.8rem;">ر.س</span></h4>
-        <img src="app/assets/icons/star.png" alt="" height="30rem">
+        <img src="assets/icons/star.png" alt="" height="30rem">
   
           <!--  basket =====================-->
   
-        <img onclick="basket_counter()" src="app/assets/icons/basket2.png"
+        <img onclick="basket_counter()" src="assets/icons/basket2.png"
          alt="" height="35rem" style="background-color: rgb(247, 12, 12);
          border-radius: 50%;padding:.2rem;"
          >
-        <img src="app/assets/icons/close.png" alt="" height="30rem">
+        <img src="assets/icons/close.png" alt="" height="30rem">
   
       </div>
 
 
 
       <div class="book">
-        <img onclick="callImage(this);" src="app/assets/books/book8.jpeg" alt="" height="250rem" width="180rem">
+        <img onclick="callImage(this);" src="assets/books/book8.jpeg" alt="" height="250rem" width="180rem">
         <div class="booktype">
           <h1 class="search_key">كتاب الكتروني</h1>
-          <img src="app/assets/icons/logo.png" alt="" height="50rem">
+          <img src="assets/icons/logo.png" alt="" height="50rem">
         </div>
         <p>كبرياء وهو كتاب الكتروني</p>
         <h4>17.9<span style="font-size:0.8rem;">ر.س</span></h4>
-        <img src="app/assets/icons/star.png" alt="" height="30rem">
-  
-          <!--  basket =====================-->
-  
-        <img onclick="basket_counter()" src="icons/basket2.png"
-         alt="" height="35rem" style="background-color: rgb(247, 12, 12);
-         border-radius: 50%;padding:.2rem;"
-         >
-        <img src="app/assets/icons/close.png" alt="" height="30rem">
-  
-      </div>
-
-
-
-
-
-
-      <div class="book">
-        <img onclick="callImage(this);" src="app/assets/books/book10.jpeg" alt="" height="250rem" width="180rem">
-        <div class="booktype">
-          <h1 class="search_key">كتاب الكتروني</h1>
-          <img src="app/assets/icons/logo.png" alt="" height="50rem">
-        </div>
-        <p>كبرياء وهو كتاب الكتروني</p>
-        <h4>17.9<span style="font-size:0.8rem;">ر.س</span></h4>
-        <img src="app/assets/icons/star.png" alt="" height="30rem">
-  
-          <!--  basket =====================-->
-  
-        <img onclick="basket_counter()" src="app/assets/icons/basket2.png"
-         alt="" height="35rem" style="background-color: rgb(247, 12, 12);
-         border-radius: 50%;padding:.2rem;"
-         >
-        <img src="app/assets/icons/close.png" alt="" height="30rem">
-  
-      </div>
-
-
-
-
-
-
-      <div class="book">
-        <img onclick="callImage(this);" src="app/assets/books/book5.jpeg" alt="" height="250rem" width="180rem">
-        <div class="booktype">
-          <h1 class="search_key">كتاب الكتروني</h1>
-          <img src="app/assets/icons/logo.png" alt="" height="50rem">
-        </div>
-        <p>كبرياء وهو كتاب الكتروني</p>
-        <h4>17.9<span style="font-size:0.8rem;">ر.س</span></h4>
-        <img src="app/assets/icons/star.png" alt="" height="30rem">
+        <img src="assets/icons/star.png" alt="" height="30rem">
   
           <!--  basket =====================-->
   
@@ -126,7 +77,57 @@ require_once 'app/views/includes/header.php'  ?>
          alt="" height="35rem" style="background-color: rgb(247, 12, 12);
          border-radius: 50%;padding:.2rem;"
          >
-        <img src="app/assets/icons/close.png" alt="" height="30rem">
+        <img src="assets/icons/close.png" alt="" height="30rem">
+  
+      </div>
+
+
+
+
+
+
+      <div class="book">
+        <img onclick="callImage(this);" src="assets/books/book10.jpeg" alt="" height="250rem" width="180rem">
+        <div class="booktype">
+          <h1 class="search_key">كتاب الكتروني</h1>
+          <img src="assets/icons/logo.png" alt="" height="50rem">
+        </div>
+        <p>كبرياء وهو كتاب الكتروني</p>
+        <h4>17.9<span style="font-size:0.8rem;">ر.س</span></h4>
+        <img src="assets/icons/star.png" alt="" height="30rem">
+  
+          <!--  basket =====================-->
+  
+        <img onclick="basket_counter()" src="assets/icons/basket2.png"
+         alt="" height="35rem" style="background-color: rgb(247, 12, 12);
+         border-radius: 50%;padding:.2rem;"
+         >
+        <img src="assets/icons/close.png" alt="" height="30rem">
+  
+      </div>
+
+
+
+
+
+
+      <div class="book">
+        <img onclick="callImage(this);" src="assets/books/book5.jpeg" alt="" height="250rem" width="180rem">
+        <div class="booktype">
+          <h1 class="search_key">كتاب الكتروني</h1>
+          <img src="assets/icons/logo.png" alt="" height="50rem">
+        </div>
+        <p>كبرياء وهو كتاب الكتروني</p>
+        <h4>17.9<span style="font-size:0.8rem;">ر.س</span></h4>
+        <img src="assets/icons/star.png" alt="" height="30rem">
+  
+          <!--  basket =====================-->
+  
+        <img onclick="basket_counter()" src="icons/basket2.png"
+         alt="" height="35rem" style="background-color: rgb(247, 12, 12);
+         border-radius: 50%;padding:.2rem;"
+         >
+        <img src="assets/icons/close.png" alt="" height="30rem">
   
       </div>
 
@@ -137,10 +138,10 @@ require_once 'app/views/includes/header.php'  ?>
 
 
       <div class="book">
-        <img onclick="callImage(this);" src="app/assets/books/book6.jpeg" alt="" height="250rem" width="180rem">
+        <img onclick="callImage(this);" src="assets/books/book6.jpeg" alt="" height="250rem" width="180rem">
         <div class="booktype">
           <h1 class="search_key">كتاب الكتروني</h1>
-          <img src="app/assets/icons/logo.png" alt="" height="50rem">
+          <img src="assets/icons/logo.png" alt="" height="50rem">
         </div>
         <p>كبرياء وهو كتاب الكتروني</p>
         <h4>17.9<span style="font-size:0.8rem;">ر.س</span></h4>
@@ -148,11 +149,11 @@ require_once 'app/views/includes/header.php'  ?>
   
           <!--  basket =====================-->
   
-        <img onclick="basket_counter()" src="app/assets/icons/basket2.png"
+        <img onclick="basket_counter()" src="assets/icons/basket2.png"
          alt="" height="35rem" style="background-color: rgb(247, 12, 12);
          border-radius: 50%;padding:.2rem;"
          >
-        <img src="app/assets/icons/close.png" alt="" height="30rem">
+        <img src="assets/icons/close.png" alt="" height="30rem">
   
       </div>
 
@@ -164,22 +165,22 @@ require_once 'app/views/includes/header.php'  ?>
 
       
     <div class="book">
-        <img onclick="callImage(this);" src="app/assets/books/book4.jpeg" alt="" height="250rem" width="180rem">
+        <img onclick="callImage(this);" src="assets/books/book4.jpeg" alt="" height="250rem" width="180rem">
         <div class="booktype">
           <h1 class="search_key">كتاب الكتروني</h1>
-          <img src="app/assets/icons/logo.png" alt="" height="50rem">
+          <img src="assets/icons/logo.png" alt="" height="50rem">
         </div>
         <p>كبرياء وهو كتاب الكتروني</p>
         <h4>17.9<span style="font-size:0.8rem;">ر.س</span></h4>
-        <img src="app/assets/icons/star.png" alt="" height="30rem">
+        <img src="assets/icons/star.png" alt="" height="30rem">
   
           <!--  basket =====================-->
   
-        <img onclick="basket_counter()" src="app/assets/icons/basket2.png"
+        <img onclick="basket_counter()" src="assets/icons/basket2.png"
          alt="" height="35rem" style="background-color: rgb(247, 12, 12);
          border-radius: 50%;padding:.2rem;"
          >
-        <img src="app/assets/icons/close.png" alt="" height="30rem">
+        <img src="assets/icons/close.png" alt="" height="30rem">
   
       </div>
 
@@ -201,7 +202,7 @@ require_once 'app/views/includes/header.php'  ?>
 
             <div class="cat-title">
                 <h2>كتب الكترونية</h2>
-                <img src="app/assets/icons/logo.png" alt="">
+                <img src="assets/icons/logo.png" alt="">
             </div>
             <div class="cat-result">
                 <h1>تصفية النتائج</h1>
@@ -218,7 +219,6 @@ require_once 'app/views/includes/header.php'  ?>
     </div>
     <!-- main end-->
 
-<?php
-require_once 'app/views/includes/footer.php'  ?>
+    <?php
 
-
+require_once __DIR__."/includes/footer.php"; ?>
