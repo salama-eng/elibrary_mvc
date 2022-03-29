@@ -10,6 +10,8 @@ use coding\app\system\AppSystem;
 use coding\app\system\Router;
 use coding\app\controllers\UsersController;
 use coding\app\controllers\bookController;
+use coding\app\controllers\AdminCategory
+;
 use Dotenv\Dotenv;
 
 $dotenv = Dotenv::createImmutable(dirname(__DIR__));//createImmutable(__DIR__);
@@ -48,7 +50,11 @@ Router::get('/booksList',[bookController::class,'booksList']);
 Router::get('/addbook',[bookController::class,'addbook']);
 Router::post('/storbook',[bookController::class,'storbook']);
 
-Router::get('/AdminCategory',[UsersController::class,'Admincategory']);   
+Router::get('/AdminCategory',[AdminCategory::class,'Admincategory']);   
+Router::get('/AddCategory',[AdminCategory::class,'AddCategory']); 
+Router::post('/storcategory',[AdminCategory::class,'storcategory']); 
+
+
 Router::get('/users',[UsersController::class,'users']);   
 Router::get('/authors',[UsersController::class,'authors']);  
 Router::get('/publishers',[UsersController::class,'publishers']); 

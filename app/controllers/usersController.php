@@ -41,11 +41,6 @@ class UsersController extends Controller{
 
 
 
-public function booksList(){
-      
-    $this->view('admin/bookslist');
-
-}
 public function admincategory(){
   
     $this->view('admin/admincategory');

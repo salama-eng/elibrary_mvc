@@ -225,12 +225,12 @@
       </a>
       <ul class="menu-sub">
         <li class="menu-item">
-          <a href="category" class="menu-link">
+          <a href="AdminCategory" class="menu-link">
             <div data-i18n="list category">list category</div>
           </a>
         </li>
         <li class="menu-item">
-          <a href="addCategory" class="menu-link">
+          <a href="AddCategory" class="menu-link">
             <div data-i18n="Add category">Add category</div>
           </a>
         </li>

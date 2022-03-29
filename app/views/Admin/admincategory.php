@@ -11,117 +11,85 @@ require_once __DIR__."/header.php"; ?>
         
           <div class="container-xxl flex-grow-1 container-p-y">
             
-            
-<h4 class="fw-bold py-3 mb-4">
-  <span class="text-muted fw-light"> DataTables /</span> Basic
-</h4>
+   
 
-<!-- DataTable with Buttons -->
-<div class="card">
-  <div class="card-datatable table-responsive">
-    <table class="datatables-basic table border-top">
-      <thead>
-        <tr>
-          <th></th>
-          <th></th>
-          <th></th>
-          <th>id</th>
-          <th>title</th>
-          <th>image</th>
-          <th>price</th>
-          <th>description</th>
-          <th>page_numbers</th>
-          <th>category</th>
-          <th>Author</th>
-          <th>Publisher</th>
-          <th>Quantity</th>
-          <th>format</th>
-          <th>created by</th>
-          <th>status</th>
-          <th>created at</th>
-          <th>apdates at</th>
-        </tr>
-      </thead>
-    </table>
-  </div>
-</div>
-<!-- Modal to add new record -->
-<div class="offcanvas offcanvas-end" id="add-new-record">
-  <div class="offcanvas-header border-bottom">
-    <h5 class="offcanvas-title" id="exampleModalLabel">New Record</h5>
-    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-  </div>
-  <div class="offcanvas-body flex-grow-1">
-    <form class="add-new-record pt-0 row g-2" id="form-add-new-record" onsubmit="return false">
-      <div class="col-sm-12">
-        <label class="form-label" for="basicFullname">Full Name</label>
-        <div class="input-group input-group-merge">
-          <span id="basicFullname2" class="input-group-text"><i class="bx bx-user"></i></span>
-          <input type="text" id="basicFullname" class="form-control dt-full-name" name="basicFullname" placeholder="John Doe" aria-label="John Doe" aria-describedby="basicFullname2" />
-        </div>
-      </div>
-      <div class="col-sm-12">
-        <label class="form-label" for="basicPost">Post</label>
-        <div class="input-group input-group-merge">
-          <span id="basicPost2" class="input-group-text"><i class='bx bxs-briefcase'></i></span>
-          <input type="text" id="basicPost" name="basicPost" class="form-control dt-post" placeholder="Web Developer" aria-label="Web Developer" aria-describedby="basicPost2" />
-        </div>
-      </div>
-      <div class="col-sm-12">
-        <label class="form-label" for="basicEmail">Email</label>
-        <div class="input-group input-group-merge">
-          <span class="input-group-text"><i class="bx bx-envelope"></i></span>
-          <input type="text" id="basicEmail" name="basicEmail" class="form-control dt-email" placeholder="john.doe@example.com" aria-label="john.doe@example.com" />
-        </div>
-        <div class="form-text">
-          You can use letters, numbers & periods
-        </div>
-      </div>
-      <div class="col-sm-12">
-        <label class="form-label" for="basicDate">Joining Date</label>
-        <div class="input-group input-group-merge">
-          <span id="basicDate2" class="input-group-text"><i class='bx bx-calendar'></i></span>
-          <input type="text" class="form-control dt-date" id="basicDate" name="basicDate" aria-describedby="basicDate2" placeholder="MM/DD/YYYY" aria-label="MM/DD/YYYY" />
-        </div>
-      </div>
-      <div class="col-sm-12">
-        <label class="form-label" for="basicSalary">Salary</label>
-        <div class="input-group input-group-merge">
-          <span id="basicSalary2" class="input-group-text"><i class='bx bx-dollar'></i></span>
-          <input type="number" id="basicSalary" name="basicSalary" class="form-control dt-salary" placeholder="12000" aria-label="12000" aria-describedby="basicSalary2" />
-        </div>
-      </div>
-      <div class="col-sm-12">
-        <button type="submit" class="btn btn-primary data-submit me-sm-3 me-1">Submit</button>
-        <button type="reset" class="btn btn-outline-secondary" data-bs-dismiss="offcanvas">Cancel</button>
-      </div>
-    </form>
 
-  </div>
-</div>
+
+
+
+
+
+
+
 <!--/ DataTable with Buttons -->
 
 <hr class="my-5">
 
-<!-- Complex Headers -->
-
-<!--/ Complex Headers -->
-
-<hr class="my-5">
-
-<!-- Row grouping -->
-
-<!--/ Row grouping -->
-
-<hr class="my-5">
 
 <!-- Multilingual -->
 
 <!--/ Multilingual -->
 
 
+
+
+<!-- Basic Bootstrap Table -->
+<div class="card">
+  <h5 class="card-header">Bordered Table</h5>
+  <div class="card-body">
+    <div class="table-responsive text-nowrap">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th> category name </th>
+            <th>image</th>
+            <th>status</th>
             
-          </div>
+            <th>action</th>
+          </tr>
+        </thead>
+        <tbody>
+       
+         
+         <?php foreach($params as $category){?>
+          <tr>
+            
+            <td><?= $category['name'];?></td>
+            <td>
+              <img class="img-fluid rounded" height="150px" width="150px" src="/images/<?= $category['image'];?>">
+            </td>
+            <td>
+            <?php if($category['is_active']==1) {?>    
+            <span class="badge bg-label-success me-1">active</span>
+            <?php }
+            else {?>
+             <span class="badge bg-label-danger me-1">not active</span>
+            <?php } ?>
+            </td>
+            <td>
+            <a href="/edit_category/<?php echo $category['id'];?>" class="btn btn-icon btn-outline-dribbble">
+                <i class="tf-icons bx bx-edit-alt me-1"></i>
+              </a>
+              <button type="button" class="btn btn-icon btn-outline-dribbble">
+                <i class="tf-icons bx bx-trash me-1"></i>
+              </button>
+              
+            </td>
+          </tr>
+          <?php } ?>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+            
+          </div></div>
           <!-- / Content -->
 
           
@@ -131,8 +99,3 @@ require_once __DIR__."/header.php"; ?>
 <?php
 
 require_once __DIR__."/footer.php"; ?>
-
-
-
-
-
