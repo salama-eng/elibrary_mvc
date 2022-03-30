@@ -1,8 +1,9 @@
 <?php
-require_once 'controller.php';
-require_once 'validation.php';
+namespace coding\app\controllers;
+use coding\app\models;
 class Users extends Controller 
 {
+    
    public $valid;
 
     public function __construct()

@@ -4,7 +4,7 @@
 
 require_once __DIR__ .'/../vendor/autoload.php';
 
-use coding\app\controllers\AuthorsController;
+use coding\app\controllers\AuthorController;
 use coding\app\controllers\PublishersController;
 use coding\app\system\AppSystem;
 use coding\app\system\Router;
@@ -55,14 +55,21 @@ Router::get('/AddCategory',[AdminCategory::class,'AddCategory']);
 Router::post('/storcategory',[AdminCategory::class,'storcategory']); 
 
 
-Router::get('/users',[UsersController::class,'users']);   
-Router::get('/authors',[UsersController::class,'authors']);  
-Router::get('/publishers',[UsersController::class,'publishers']); 
+Router::get('/users',[UsersController::class,'users']);  
+
+
+Router::get('/Authors',[AuthorController::class,'Authors']);
+Router::get('/AddAuthor',[AuthorController::class,'AddAuthor']); 
+Router::post('/storauthor',[AuthorController::class,'storauthor']);  
+
+Router::get('/publishers',[PublishersController::class,'publishers']);
+Router::get('/addpublisher',[PublishersController::class,'addpublisher']);  
+
 Router::get('/offer',[UsersController::class,'offer']);      
 Router::get('/order',[UsersController::class,'order']);      
 Router::get('/cites',[UsersController::class,'cites']);      
 Router::get('/address',[UsersController::class,'address']);  
-Router::get('/createAuthor',[bookController::class,'createAuthor']);   
+ 
       
 $system->start();
 

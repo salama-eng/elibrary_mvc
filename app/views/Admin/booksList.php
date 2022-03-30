@@ -76,9 +76,25 @@ require_once __DIR__."/header.php"; ?>
       <td><?= $book['quantity'];?></td>
   <td><?= $book['format'];?></td>
   <td><?= $book['created_by'];?></td>
-  <td><?= $book['is_active'];?></td>
+  <td>
+            <?php if($book['is_active']==1) {?>    
+            <span class="badge bg-label-success me-1">active</span>
+            <?php }
+            else {?>
+             <span class="badge bg-label-danger me-1">not active</span>
+            <?php } ?>
+            </td>
   <td><?= $book['created_at'];?></td>
   <td><?= $book['updated_at'];?></td>
+  <td>
+            <a href="/edit_category/<?php echo $book['id'];?>" class="btn btn-icon btn-outline-dribbble">
+                <i class="tf-icons bx bx-edit-alt me-1"></i>
+              </a>
+              <button type="button" class="btn btn-icon btn-outline-dribbble">
+                <i class="tf-icons bx bx-trash me-1"></i>
+              </button>
+              
+            </td>
 </tr>
 
 

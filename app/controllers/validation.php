@@ -1,4 +1,6 @@
 <?php
+namespace coding\app\controllers;
+
 
 
 class validation{

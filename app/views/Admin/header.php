@@ -270,12 +270,12 @@
       </a>
       <ul class="menu-sub">
         <li class="menu-item">
-          <a href="authors" class="menu-link">
+          <a href="Authors" class="menu-link">
             <div data-i18n="List Authors">List authors</div>
           </a>
         </li>
         <li class="menu-item">
-          <a href="addauthor" class="menu-link">
+          <a href="AddAuthor" class="menu-link">
             <div data-i18n="Add author">Add Author</div>
           </a>
         </li>

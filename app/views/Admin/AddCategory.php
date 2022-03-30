@@ -52,7 +52,7 @@ require_once __DIR__."/header.php"; ?>
       
       <div class="col-md-6">
         <div class="form-password-toggle">
-          <label class="form-label" for="multicol-confirm-password">تفعيل القسم</label>
+          <label class="form-label" for="multicol-confirm-password"> activate</label>
           <div class="input-group input-group-merge">
           <label class="switch">
               <input name="is_active" value=1 type="checkbox" checked class="switch-input" />
