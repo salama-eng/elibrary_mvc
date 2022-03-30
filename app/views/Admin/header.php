@@ -297,7 +297,7 @@
           </a>
         </li>
         <li class="menu-item">
-          <a href="addUser" class="menu-link">
+          <a href="addpublisher" class="menu-link">
             <div data-i18n="Add publisher">Add publisher</div>
           </a>
         </li>
@@ -306,14 +306,25 @@
     </li>
 
 
-     
     <li class="menu-item">
-      <a href="cites" class="menu-link">
-        <i class="menu-icon tf-icons bx bx-calendar"></i>
-        <div data-i18n="cities">cities</div>
+      <a href="javascript:void(0);" class="menu-link menu-toggle">
+        <i class='menu-icon tf-icons bx bx-food-menu'></i>
+        <div data-i18n="cities">publisher</div>
       </a>
+      <ul class="menu-sub">
+        <li class="menu-item">
+          <a href="publishers" class="menu-link">
+            <div data-i18n="List publishers">List users</div>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="addpublisher" class="menu-link">
+            <div data-i18n="Add publisher">Add publisher</div>
+          </a>
+        </li>
+        
+      </ul>
     </li>
-
 
        
     <li class="menu-item">

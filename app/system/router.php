@@ -53,7 +53,7 @@ class Router{
                 call_user_func($callback);
             }
             else {
-                echo "page not found";
+                $this->view('ERORR',array());
             }
 
 

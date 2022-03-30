@@ -63,7 +63,8 @@ Router::get('/AddAuthor',[AuthorController::class,'AddAuthor']);
 Router::post('/storauthor',[AuthorController::class,'storauthor']);  
 
 Router::get('/publishers',[PublishersController::class,'publishers']);
-Router::get('/addpublisher',[PublishersController::class,'addpublisher']);  
+Router::get('/addpublisher',[PublishersController::class,'addpublisher']);
+Router::post('/storpublisher',[PublishersController::class,'storpublisher']);  
 
 Router::get('/offer',[UsersController::class,'offer']);      
 Router::get('/order',[UsersController::class,'order']);      
