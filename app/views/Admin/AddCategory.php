@@ -40,12 +40,12 @@ require_once __DIR__."/header.php"; ?>
     <div class="row g-3">
       <div class="col-md-6">
         <label class="form-label" for="multicol-username">category name</label>
-        <input name="category_name" type="text" id="multicol-username" class="form-control" placeholder="john.doe" />
+        <input name="category_name" type="text" id="multicol-username" class="form-control" required placeholder="john.doe" />
       </div>
       <div class="col-md-6">
         <label class="form-label" for="multicol-email"> image</label>
         <div class="input-group input-group-merge">
-          <input  name="image" type="file"  class="form-control"  aria-describedby="multicol-email2" />
+          <input  name="image" type="file"  class="form-control"  aria-describedby="multicol-email2" required />
           
         </div>
       </div>
@@ -55,7 +55,7 @@ require_once __DIR__."/header.php"; ?>
           <label class="form-label" for="multicol-confirm-password"> activate</label>
           <div class="input-group input-group-merge">
           <label class="switch">
-              <input name="is_active" value=1 type="checkbox" checked class="switch-input" />
+              <input name="is_active" value=1 type="checkbox" checked class="switch-input" required />
               <span class="switch-toggle-slider">
                 <span class="switch-on"></span>
                 <span class="switch-off"></span>

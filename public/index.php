@@ -44,6 +44,9 @@ Router::get('/basket',[UsersController::class,'basket']);
 Router::get('/stepper',[UsersController::class,'stepper']);
 Router::get('/details',[UsersController::class,'details']);   
 Router::get('/header',[UsersController::class,'header']); 
+Router::get('/Users',[UsersController::class,'Users']); 
+Router::get('/AddUser',[UsersController::class,'AddUser']); 
+Router::post('/StorUser',[UsersController::class,'StorUser']); 
 
 Router::get('/booksList',[bookController::class,'booksList']); 
 
@@ -70,7 +73,7 @@ Router::get('/offer',[UsersController::class,'offer']);
 Router::get('/order',[UsersController::class,'order']);      
 Router::get('/cites',[UsersController::class,'cites']);      
 Router::get('/address',[UsersController::class,'address']);  
- 
+Router::get('/ERROR',[UsersController::class,'ERROR']);
       
 $system->start();
 

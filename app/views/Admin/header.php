@@ -201,13 +201,13 @@
       </a>
       <ul class="menu-sub">
         <li class="menu-item">
-          <a href="listUsers" class="menu-link">
-            <div data-i18n="List">List users</div>
+          <a href="Users" class="menu-link">
+            <div data-i18n="List Users">List users</div>
           </a>
         </li>
         <li class="menu-item">
-          <a href="addUser" class="menu-link">
-            <div data-i18n="Preview">Add user</div>
+          <a href="AddUser" class="menu-link">
+            <div data-i18n="Add User">Add user</div>
           </a>
         </li>
         

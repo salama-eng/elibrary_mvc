@@ -56,7 +56,7 @@ require_once __DIR__."/header.php"; ?>
 <div class="col-md-6">
 <label class="form-label" for="multicol-email">fax</label>
 <div class="input-group input-group-merge">
-  <input  name="fax" type="text"  class="form-control"  aria-describedby="multicol-email2" />
+  <input  name="fax" type="text"  class="form-control" required aria-describedby="multicol-email2" />
   
 </div>
 </div>
@@ -64,7 +64,7 @@ require_once __DIR__."/header.php"; ?>
 <div class="col-md-6">
 <label class="form-label" for="multicol-email">email</label>
 <div class="input-group input-group-merge">
-  <input  name="email" type="email"  class="form-control"  aria-describedby="multicol-email2" />
+  <input  name="email" type="email"  class="form-control" required aria-describedby="multicol-email2" />
   
 </div>
 </div>
@@ -73,7 +73,7 @@ require_once __DIR__."/header.php"; ?>
 <div class="col-md-6">
 <label class="form-label" for="multicol-email">address</label>
 <div class="input-group input-group-merge">
-  <input  name="address" type="text"  class="form-control"  aria-describedby="multicol-email2" />
+  <input  name="address" type="text"  class="form-control" required aria-describedby="multicol-email2" />
   
 </div>
 </div>
@@ -83,7 +83,7 @@ require_once __DIR__."/header.php"; ?>
 <div class="col-md-6">
 <label class="form-label" for="multicol-email">country</label>
 <div class="input-group input-group-merge">
-  <input  name="country" type="text"  class="form-control"  aria-describedby="multicol-email2" />
+  <input  name="country" type="text"  class="form-control" required aria-describedby="multicol-email2" />
   
 </div>
 </div>
@@ -94,7 +94,7 @@ require_once __DIR__."/header.php"; ?>
 <div class="col-md-6">
 <label class="form-label" for="multicol-email">created by</label>
 <div class="input-group input-group-merge">
-  <input  name="created_by" type="text"  class="form-control"  aria-describedby="multicol-email2" />
+  <input  name="created_by" type="text"  class="form-control" required  aria-describedby="multicol-email2" />
   
 </div>
 </div>

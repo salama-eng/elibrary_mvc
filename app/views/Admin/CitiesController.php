@@ -1,58 +1,25 @@
 <?php
 namespace coding\app\controllers;
 
-use coding\app\models\User;
+use coding\app\models\cities;
 
-class UsersController extends Controller{
+class CitiesController extends Controller{
+ 
  
 
 
-    public function show(){
-      
-        $this->view('index');
+function Cities(){
 
-    }
-    
-   
-
-    public function category(){
-      
-        $this->view('category');
-
-    }
-    public  function basket(){
-      
-        $this->view('basket');
-    }
-    public function details(){
-      
-        $this->view('details');
-
-    }
-    public function stepper(){
-      
-        $this->view('stepper');
-
-    }
-
-   
-/************************** */
-
-
-
-
-function Users(){
-
-    $user=new user();
-    $alluser=$user->getAll();
+    $cities=new cities();
+    $allcities=$cities->getAll();
 // print_r($alluser);
 
-    $this->view('admin/Users',$alluser);
+    $this->view('admin/Cities',$allcities);
 
 }
 
 
-function AddUser(){
+function AddCity(){
   $this->view('admin/AddUser');
 
 }

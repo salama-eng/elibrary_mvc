@@ -24,14 +24,14 @@ require_once __DIR__."/header.php"; ?>
 <div class="row g-3">
 <div class="col-md-6">
 <label class="form-label" for="multicol-username">book name </label>
-<input name="title" type="text" id="multicol-username" class="form-control" placeholder="john.doe" />
+<input name="title" type="text" id="multicol-username" required class="form-control" placeholder="john.doe" />
 </div>
 
 
 <div class="col-md-6">
 <label class="form-label" for="multicol-email">book image </label>
 <div class="input-group input-group-merge">
-  <input  name="image" type="file"  class="form-control"  aria-describedby="multicol-email2" />
+  <input  name="image" type="file"  class="form-control" required aria-describedby="multicol-email2" />
   
 </div>
 </div>
@@ -39,7 +39,7 @@ require_once __DIR__."/header.php"; ?>
 <div class="col-md-6">
 <label class="form-label" for="multicol-email">book price </label>
 <div class="input-group input-group-merge">
-  <input  name="price" type="number"  class="form-control"  aria-describedby="multicol-email2" />
+  <input  name="price" type="number"  class="form-control" required aria-describedby="multicol-email2" />
   
 </div>
 </div>
@@ -48,7 +48,7 @@ require_once __DIR__."/header.php"; ?>
 <div class="col-md-6">
 <label class="form-label" for="multicol-email">description</label>
 <div class="input-group input-group-merge">
-  <input  name="description" type="text"  class="form-control"  aria-describedby="multicol-email2" />
+  <input  name="description" type="text"  class="form-control" required  aria-describedby="multicol-email2" />
   
 </div>
 </div>
@@ -56,7 +56,7 @@ require_once __DIR__."/header.php"; ?>
 <div class="col-md-6">
 <label class="form-label" for="multicol-email">page number</label>
 <div class="input-group input-group-merge">
-  <input  name="number" type="text"  class="form-control"  aria-describedby="multicol-email2" />
+  <input  name="number" type="text"  class="form-control" required aria-describedby="multicol-email2" />
   
 </div>
 </div>
@@ -65,7 +65,7 @@ require_once __DIR__."/header.php"; ?>
 <div class="col-md-6">
 <label class="form-label" for="multicol-email">Quantity</label>
 <div class="input-group input-group-merge">
-  <input  name="quantity" type="text"  class="form-control"  aria-describedby="multicol-email2" />
+  <input  name="quantity" type="text"  class="form-control" required aria-describedby="multicol-email2" />
   
 </div>
 </div>
@@ -75,7 +75,7 @@ require_once __DIR__."/header.php"; ?>
 <div class="col-md-6">
 <label class="form-label" for="multicol-email">format</label>
 <div class="input-group input-group-merge">
-  <input  name="format" type="text"  class="form-control"  aria-describedby="multicol-email2" />
+  <input  name="format" type="text"  class="form-control" required aria-describedby="multicol-email2" />
   
 </div>
 </div>
@@ -86,7 +86,7 @@ require_once __DIR__."/header.php"; ?>
 <div class="col-md-6">
 <label class="form-label" for="multicol-email">created by</label>
 <div class="input-group input-group-merge">
-  <input  name="created_by" type="text"  class="form-control"  aria-describedby="multicol-email2" />
+  <input  name="created_by" type="text"  class="form-control" required aria-describedby="multicol-email2" />
   
 </div>
 </div>
