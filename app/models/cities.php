@@ -8,7 +8,7 @@ class cities extends Model{
 
     function __construct()
     {
-        parent::$tblName="users";
+        parent::$tblName="cities";
         
     }
 

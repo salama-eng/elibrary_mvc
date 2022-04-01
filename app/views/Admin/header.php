@@ -309,17 +309,17 @@
     <li class="menu-item">
       <a href="javascript:void(0);" class="menu-link menu-toggle">
         <i class='menu-icon tf-icons bx bx-food-menu'></i>
-        <div data-i18n="cities">publisher</div>
+        <div data-i18n="cities"> Cities </div>
       </a>
       <ul class="menu-sub">
         <li class="menu-item">
-          <a href="publishers" class="menu-link">
-            <div data-i18n="List publishers">List users</div>
+          <a href="Cities" class="menu-link">
+            <div data-i18n="List Cities">List Cities</div>
           </a>
         </li>
         <li class="menu-item">
-          <a href="addpublisher" class="menu-link">
-            <div data-i18n="Add publisher">Add publisher</div>
+          <a href="AddCity" class="menu-link">
+            <div data-i18n="Add City">Add City</div>
           </a>
         </li>
         

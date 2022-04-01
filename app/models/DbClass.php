@@ -130,6 +130,14 @@ function runQuery()
 
 }
 
+function innerSelect()
+{
+
+    $this->final_query="select name from users where ";
+  
+     return $this;
+}
+
 public function deleteById($table,$id){
   // $count=$this->pdo->exec("delete from $table set $col='$col_val' where $condit_col='$condit_val'");
 
