@@ -85,39 +85,20 @@ class Model{
      else  echo "Error";
      
       return false;
-     // return true;
-   //echo $sql_query;
-
-    //   $query = '';  
-    //   $condition = ''; 
-    //     foreach($list as $key => $value)  
-    //     {  $values[]=
-    //          $query .= $key . "='".is_string($value)?"'".$value."'":$value."', ";  
-    //     }  
-    //    $query = substr($query, 0, -2);
-  
-    //    foreach($where_condition as $key => $value)  
-    //     {  
-    //          $condition .= $key . "='".$value."' AND ";  
-    //     }  
-    //      $condition = substr($condition, 0, -5);  
-    //       $query = "UPDATE ".self::$tblName." SET ".$query." WHERE ".$condition."";  
-    //       echo $query;
-    //       $stmt=AppSystem::$appSystem->database->pdo->prepare($query);
-    //  //   if($stmt->execute())
-    //     {
-        
-    //          return false;
-    //     }
-    //   //  else  echo "Error";
-       
-    //     return false;
-    //     //  $stmt->execute();
     
-  
       }
   
     
+      public function delete($id){
+        $sql_query="delete from ".self::$tblName." where id=".$id."";
+       //echo $sql_query;
+         $stmt=AppSystem::$appSystem->database->pdo->prepare($sql_query);
+        $stmt->execute();
+        return false;
+       
+
+    }
+
 
 
     public function getAll(){
@@ -242,21 +223,7 @@ class Model{
      }
   
   
-     public function delete($table,$where=null){
-      // $count=$this->pdo->exec("delete from $table set $col='$col_val' where $condit_col='$condit_val'");
-      if($where==null){
-          $stmt=$this->pdo->prepare("delete from $table");
-          $count=$stmt->execute();
-         return $count;
-      }
-      else{
-          $stmt=$this->pdo->prepare("delete from $table where $where");
-          $count=$stmt->execute();
-         return $count;
-      }
-      
-  
-  }
+    
   
   public function deleteById($table,$id){
     // $count=$this->pdo->exec("delete from $table set $col='$col_val' where $condit_col='$condit_val'");

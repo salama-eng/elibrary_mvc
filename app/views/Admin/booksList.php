@@ -111,9 +111,9 @@ require_once __DIR__ . "/header.php"; ?>
             <a href="/edit_book/<?php echo $book['id'];?>" class="btn btn-icon btn-outline-dribbble">
                 <i class="tf-icons bx bx-edit-alt me-1"></i>
               </a>
-              <button type="button" class="btn btn-icon btn-outline-dribbble">
+              <a href="/remove_book/<?php echo $book['id'];?>">    <button onclick="return confirm('Do you really want to Delete it ?');" type="button" class="btn btn-icon btn-outline-dribbble">
                 <i class="tf-icons bx bx-trash me-1"></i>
-              </button>
+              </button></a>
               
             </td>
               </tr>

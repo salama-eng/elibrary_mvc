@@ -45,8 +45,7 @@ class bookController extends Controller{
 
 
     function update(){
-       print_r($_POST);
-        print_r($_FILES);
+       
          $book=new books();
          if(isset($_FILES['image']))
 
@@ -65,25 +64,39 @@ class bookController extends Controller{
         $book->quantity=$_POST['quantity'];
         $book->format=$_POST['format'];
         $book->created_by=$_POST['created_by'];
-        $book->update($id);
-    //    // if(!$book->update())
-    //     //{
-    //          echo "<script>alert('You have successfully inserted the data');</script>";
-    // // echo "<script type='text/javascript'> document.location ='booksList'; </script>";
-    //     }
-    //     else 
-    //     {
-    //         echo "<script>alert('Something Went Wrong. Please try again');</script>";
-    //         // echo "<script type='text/javascript'> document.location ='addbook'; </script>";
-    //     }
+        
+       if(!$book->update($id))
+        {
+             echo "<script>alert('You have successfully update the data');</script>";
+     echo "<script type='text/javascript'> document.location ='booksList'; </script>";
+        }
+        else 
+        {
+            echo "<script>alert('Something Went Wrong. Please try again');</script>";
+            echo "<script type='text/javascript'> document.location ='edite_book'; </script>";
+        }
        
 
        
   }
 
 
-    public function remove(){
-
+    public function remove($params=[]){
+        $book=new books();
+      
+        if(!$book->delete($params['id']))
+        {  
+          
+            header("Location:../booksList", 301);
+            exit();
+         
+        }
+        else 
+        {
+            echo "<script>alert('Something Went Wrong. Please try again');</script>";
+            echo "<script type='text/javascript'> document.location ='booksList'; </script>";
+        }
+       
     }
 
 
