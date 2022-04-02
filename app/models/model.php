@@ -6,13 +6,13 @@ class Model{
    
     private $final_query;
    
-   
+   public $final;
     function save():bool{
         
       
         $values=array();
         $columns=array();
-        //get_object_
+     
         foreach(get_object_vars($this) as $key=> $property){
             //echo $property;
             if($property!=self::$tblName&&$property!=$this->final_query)
@@ -40,6 +40,84 @@ class Model{
     }
 
 
+
+
+
+    public function update($id){
+
+
+
+      $values=array();
+      $columns=array();
+    
+      
+      foreach(get_object_vars($this) as $key=> $property){
+        //echo $property;
+        if($property!=self::$tblName&&$property!=$this->final_query)
+        {
+            $values[]=is_string($property)?"'".$property."'":$property;
+            $columns[]=$key;
+          }
+
+    }
+
+
+     for($i = 0; $i < 10; $i++)
+     {
+      $this->final.=$columns[$i]." = ".$values[$i].",";
+     }
+
+     echo  $this->final;
+     
+     echo '<hr>';
+     $query = substr( $this->final, 0, -1);
+   
+     $sql_query="update ".self::$tblName." set ".$query." where id =".$id;
+   
+
+ 
+      $stmt=AppSystem::$appSystem->database->pdo->prepare($sql_query);
+     if($stmt->execute())
+      {
+      
+           return false;
+      }
+     else  echo "Error";
+     
+      return false;
+     // return true;
+   //echo $sql_query;
+
+    //   $query = '';  
+    //   $condition = ''; 
+    //     foreach($list as $key => $value)  
+    //     {  $values[]=
+    //          $query .= $key . "='".is_string($value)?"'".$value."'":$value."', ";  
+    //     }  
+    //    $query = substr($query, 0, -2);
+  
+    //    foreach($where_condition as $key => $value)  
+    //     {  
+    //          $condition .= $key . "='".$value."' AND ";  
+    //     }  
+    //      $condition = substr($condition, 0, -5);  
+    //       $query = "UPDATE ".self::$tblName." SET ".$query." WHERE ".$condition."";  
+    //       echo $query;
+    //       $stmt=AppSystem::$appSystem->database->pdo->prepare($query);
+    //  //   if($stmt->execute())
+    //     {
+        
+    //          return false;
+    //     }
+    //   //  else  echo "Error";
+       
+    //     return false;
+    //     //  $stmt->execute();
+    
+  
+      }
+  
+    
 
 
     public function getAll(){
@@ -191,30 +269,18 @@ class Model{
   }
   
   
-     public function update($table_name,$list,$where_condition){
-      $query = '';  
-      $condition = ''; 
-        foreach($list as $key => $value)  
-        {  
-             $query .= $key . "='".$value."', ";  
-        }  
-       $query = substr($query, 0, -2);  
-  
-       foreach($where_condition as $key => $value)  
-        {  
-             $condition .= $key . "='".$value."' AND ";  
-        }  
-         $condition = substr($condition, 0, -5);  
-          $query = "UPDATE ".$table_name." SET ".$query." WHERE ".$condition."";  
-          $stmt=$this->pdo->prepare( $query);
-          $stmt->execute();
-    
-  
-      }
-  
 
 
+      public function getSingleRow($id){
+        $sql_query="select * from ".self::$tblName." where id=".$id."";
+       
+       //echo $sql_query;
+         $stmt=AppSystem::$appSystem->database->pdo->prepare($sql_query);
+        $stmt->execute();
+        return $stmt->fetchObject();
+        
 
+    }
 
 
 

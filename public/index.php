@@ -56,6 +56,8 @@ Router::get('/booksList',[bookController::class,'booksList']);
 
 Router::get('/addbook',[bookController::class,'addbook']);
 Router::post('/storbook',[bookController::class,'storbook']);
+Router::get('/edit_book/{id}',[bookController::class,'edit']);
+Router::post('/update',[bookController::class,'update']);
 
 /**********  Category Router ********** */
 

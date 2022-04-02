@@ -1,7 +1,7 @@
 <?php
-
-require_once __DIR__."/header.php"; ?>
-
+namespace coding\app\models;
+require_once __DIR__."/../../models/DbClass.php"; 
+require_once __DIR__ . "/header.php"; ?>
 
 
       <!-- Content wrapper -->
@@ -35,7 +35,7 @@ require_once __DIR__."/header.php"; ?>
 
 <!-- Basic Bootstrap Table -->
 <div class="card">
-  <h5 class="card-header">Table Basic</h5>
+  <h5 class="card-header">Books Table</h5>
   <div class="table-responsive text-nowrap">
     <table class="table">
       <thead>
@@ -66,16 +66,37 @@ require_once __DIR__."/header.php"; ?>
         <tr>
         <td><?= $book['id'];?></td>
      <td><?= $book['title'];?></td>
-      <td><img  src="assets/books/<?= $book['image'];?>" width="200%" height=""></td>
+      <td><img  src='images/<?= $book['image'];?>' alt="<?= $book['image'];?>"width="60" height=""></td>
         <td><?= $book['price'];?></td>
         <td><?= $book['description'];?></td>
        <td><?= $book['pages_number'];?></td>
-        <td><?= $book['category_id'];?></td>
-         <td><?= $book['author_id'];?></td>
-         <td><?= $book['publisher_id'];?></td>
+       <?php
+              
+              $result =$db_obj->select("categories")->where('id',$book['category_id'])->runQuery();?>
+             <td><?php   echo $result[0]->name ;?></td>
+
+
+             <?php
+              
+              $result =$db_obj->select("authors")->where('id',$book['author_id'])->runQuery();?>
+             <td><?php   echo $result[0]->name ;?></td>
+
+
+
+             <?php
+              
+              $result =$db_obj->select("publishers")->where('id',$book['publisher_id'])->runQuery();?>
+             <td><?php   echo $result[0]->name ;?></td>
+
+
+
+
       <td><?= $book['quantity'];?></td>
   <td><?= $book['format'];?></td>
-  <td><?= $book['created_by'];?></td>
+  <?php
+              
+              $result =$db_obj->select("users")->where('id',$book['created_by'])->runQuery();?>
+             <td><?php   echo $result[0]->name ;?></td>
   <td>
             <?php if($book['is_active']==1) {?>    
             <span class="badge bg-label-success me-1">active</span>
@@ -86,8 +107,8 @@ require_once __DIR__."/header.php"; ?>
             </td>
   <td><?= $book['created_at'];?></td>
   <td><?= $book['updated_at'];?></td>
-  <td>
-            <a href="/edit_category/<?php echo $book['id'];?>" class="btn btn-icon btn-outline-dribbble">
+<td>
+            <a href="/edit_book/<?php echo $book['id'];?>" class="btn btn-icon btn-outline-dribbble">
                 <i class="tf-icons bx bx-edit-alt me-1"></i>
               </a>
               <button type="button" class="btn btn-icon btn-outline-dribbble">
@@ -95,8 +116,7 @@ require_once __DIR__."/header.php"; ?>
               </button>
               
             </td>
-</tr>
-
+              </tr>
 
         <?php } ?> 
         

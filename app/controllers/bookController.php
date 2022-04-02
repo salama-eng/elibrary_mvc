@@ -14,15 +14,12 @@ class bookController extends Controller{
        // print_r($allbooks);
 
       
-        $this->view('admin/bookslist',$allbooks);
+        $this->view('admin/booksList',$allbooks);
 
     }
 
 
-    function create(){
-        $this->view('add_category');
-
-    }
+    
 
     // function store(){
     //     print_r($_POST);
@@ -39,13 +36,52 @@ class bookController extends Controller{
     //     $category->save();
 
     // }
-    function edit(){
+    function edit($params=[]){
+        $books=new books();
+        $result=$books->getSingleRow($params['id']);
+        $this->view('admin/edite_book',$result);
         
-
     }
+
+
     function update(){
+       print_r($_POST);
+        print_r($_FILES);
+         $book=new books();
+         if(isset($_FILES['image']))
 
-    }
+         $book->image=$this->uploadFile($_FILES['image']);
+         else
+         $book->image=$_POST['image_1'];
+        $book->title=$_POST['title'];
+        $id=$_POST['id'];
+        $book->price=$_POST['price'];
+        $book->is_active=isset($_POST['is_active'])?1:0;
+        $book->description=$_POST['description'];
+        $book->pages_number=$_POST['number'];
+        $book->category_id=$_POST['category'];
+        $book->author_id=$_POST['authors'];
+        $book->publisher_id=$_POST['publishers'];  
+        $book->quantity=$_POST['quantity'];
+        $book->format=$_POST['format'];
+        $book->created_by=$_POST['created_by'];
+        $book->update($id);
+    //    // if(!$book->update())
+    //     //{
+    //          echo "<script>alert('You have successfully inserted the data');</script>";
+    // // echo "<script type='text/javascript'> document.location ='booksList'; </script>";
+    //     }
+    //     else 
+    //     {
+    //         echo "<script>alert('Something Went Wrong. Please try again');</script>";
+    //         // echo "<script type='text/javascript'> document.location ='addbook'; </script>";
+    //     }
+       
+
+       
+  }
+
+
     public function remove(){
 
     }
@@ -53,26 +89,25 @@ class bookController extends Controller{
 
     public static function uploadFile(array $imageFile): string
     {
-        // check images direction
+        /// check images direction
         if (!is_dir(__DIR__ . '/../../public/images')) {
-            mkdir(__DIR__ . '/../../public/images');
-        }
+          mkdir(__DIR__ . '/../../public/images');
+      }
 
-        if ($imageFile && $imageFile['tmp_name']) {
-            $image = explode('.', $imageFile['name']);
-            $imageExtension = end($image);
+      if ($imageFile && $imageFile['tmp_name']) {
+          $image = explode('.', $imageFile['name']);
+          $imageExtension = end($image);
 
-            $imageName = uniqid(). "." . $imageExtension;
-            $imagePath =  __DIR__ . '/../../public/books/' . $imageName;
+          $imageName = uniqid(). "." . $imageExtension;
+          $imagePath =  __DIR__ . '/../../public/images/' . $imageName;
 
-            move_uploaded_file($imageFile['tmp_name'], $imagePath);
+          move_uploaded_file($imageFile['tmp_name'], $imagePath);
 
-            return $imageName;
-        }
+          return $imageName;
+      }
 
-        return null;
+      return null;
     }
-
 
  public function addbook()
     {
@@ -83,17 +118,17 @@ class bookController extends Controller{
 
     public function storbook()
     {
-        
-        if($_FILES['image']['name']){
-            move_uploaded_file($_FILES['image']['tmp_name'], "assets/books/".$_FILES['image']['name']);
-            $img=$_FILES['image']['name'];
-            }
-            
         $book=new books();
+        if(isset($_FILES['image']))
+
+         $book->image=$this->uploadFile($_FILES['image']);
+         else
+         $book->image=$_POST['image_1'];
+            
 
        
         $book->title=$_POST['title'];
-        $book->image=$img!=null?$img:"default.png";
+       
         $book->price=$_POST['price'];
         $book->is_active=isset($_POST['is_active'])?1:0;
         $book->description=$_POST['description'];
@@ -108,7 +143,7 @@ class bookController extends Controller{
         if(!$book->save())
         {
              echo "<script>alert('You have successfully inserted the data');</script>";
-    echo "<script type='text/javascript'> document.location ='bookslist'; </script>";
+    echo "<script type='text/javascript'> document.location ='booksList'; </script>";
         }
         else 
         {
